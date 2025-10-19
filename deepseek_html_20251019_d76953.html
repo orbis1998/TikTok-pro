@@ -1,0 +1,1031 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boostez vos ventes avec TikTok Business</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --tiktok-black: #010101;
+            --tiktok-pink: #fe2c55;
+            --tiktok-blue: #25f4ee;
+            --tiktok-white: #ffffff;
+            --tiktok-gray: #f8f8f8;
+            --tiktok-dark-gray: #6a6a6a;
+            --tiktok-purple: #7b42f5;
+        }
+        
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            background-color: var(--tiktok-gray);
+            color: var(--tiktok-black);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+        
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        
+        /* Header */
+        header {
+            background-color: var(--tiktok-black);
+            color: var(--tiktok-white);
+            padding: 20px 0;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+        }
+        
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .logo {
+            font-size: 1.8rem;
+            font-weight: bold;
+            background: linear-gradient(45deg, var(--tiktok-pink), var(--tiktok-blue));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+        
+        nav ul li {
+            margin-left: 30px;
+        }
+        
+        nav ul li a {
+            color: var(--tiktok-white);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+        }
+        
+        nav ul li a:hover {
+            color: var(--tiktok-blue);
+        }
+        
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--tiktok-black) 0%, #121212 100%);
+            color: var(--tiktok-white);
+            padding: 100px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 20% 30%, rgba(37, 244, 238, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 70%, rgba(254, 44, 85, 0.1) 0%, transparent 50%),
+                url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" opacity="0.05"><rect x="10" y="10" width="80" height="80" fill="none" stroke="white" stroke-width="1"/><rect x="20" y="20" width="60" height="60" fill="none" stroke="white" stroke-width="1"/><circle cx="50" cy="50" r="20" fill="none" stroke="white" stroke-width="1"/><rect x="30" y="40" width="40" height="20" fill="none" stroke="white" stroke-width="1"/><rect x="35" y="45" width="30" height="10" fill="white"/></svg>');
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .hero h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .hero p {
+            font-size: 1.2rem;
+            max-width: 700px;
+            margin: 0 auto 30px;
+            color: #e0e0e0;
+            animation: fadeInUp 1s ease-out 0.2s both;
+        }
+        
+        .cta-button {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--tiktok-pink), var(--tiktok-blue));
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.2rem;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(254, 44, 85, 0.4);
+            position: relative;
+            overflow: hidden;
+            animation: fadeInUp 1s ease-out 0.4s both;
+        }
+        
+        .cta-button::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: -100%;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            transition: left 0.5s;
+        }
+        
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(254, 44, 85, 0.6);
+        }
+        
+        .cta-button:hover::before {
+            left: 100%;
+        }
+        
+        /* Excitement Section */
+        .excitement {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--tiktok-purple) 0%, var(--tiktok-blue) 100%);
+            color: white;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .excitement::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100" width="100" height="100" opacity="0.1"><path d="M30,30 L70,30 L70,70 L30,70 Z" fill="none" stroke="white" stroke-width="2"/><circle cx="50" cy="50" r="15" fill="none" stroke="white" stroke-width="2"/><path d="M40,40 L60,60 M60,40 L40,60" stroke="white" stroke-width="2"/></svg>');
+        }
+        
+        .excitement-content {
+            position: relative;
+            z-index: 1;
+        }
+        
+        .excitement h2 {
+            font-size: 2.8rem;
+            margin-bottom: 30px;
+            animation: fadeInUp 1s ease-out;
+        }
+        
+        .excitement-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .excitement-card {
+            background-color: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            border-radius: 15px;
+            padding: 30px;
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        
+        .excitement-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.2);
+        }
+        
+        .excitement-icon {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            display: block;
+        }
+        
+        .excitement-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .excitement-card p {
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        /* Services Section */
+        .services {
+            padding: 100px 0;
+            background-color: var(--tiktok-white);
+        }
+        
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            font-size: 2.5rem;
+            position: relative;
+        }
+        
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(45deg, var(--tiktok-pink), var(--tiktok-blue));
+            border-radius: 2px;
+        }
+        
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .service-card {
+            background-color: var(--tiktok-white);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            border: 1px solid #f0f0f0;
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .service-icon {
+            font-size: 2.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, var(--tiktok-pink), var(--tiktok-blue));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .service-card h3 {
+            font-size: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .service-card p {
+            color: var(--tiktok-dark-gray);
+        }
+        
+        /* Pricing Section */
+        .pricing {
+            padding: 100px 0;
+            background-color: var(--tiktok-gray);
+        }
+        
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 30px;
+        }
+        
+        .pricing-card {
+            background-color: var(--tiktok-white);
+            border-radius: 10px;
+            padding: 40px 30px;
+            text-align: center;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: transform 0.3s, box-shadow 0.3s;
+            position: relative;
+            overflow: hidden;
+            border: 1px solid #f0f0f0;
+        }
+        
+        .pricing-card.popular {
+            transform: scale(1.05);
+            border: 2px solid var(--tiktok-blue);
+        }
+        
+        .pricing-card.popular::before {
+            content: 'POPULAIRE';
+            position: absolute;
+            top: 20px;
+            right: -30px;
+            background-color: var(--tiktok-blue);
+            color: white;
+            padding: 5px 30px;
+            transform: rotate(45deg);
+            font-size: 0.8rem;
+            font-weight: bold;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .pricing-card.popular:hover {
+            transform: translateY(-10px) scale(1.05);
+        }
+        
+        .pricing-header {
+            margin-bottom: 30px;
+        }
+        
+        .pricing-title {
+            font-size: 1.5rem;
+            margin-bottom: 10px;
+        }
+        
+        .pricing-price {
+            font-size: 2.5rem;
+            font-weight: bold;
+            margin-bottom: 5px;
+            background: linear-gradient(45deg, var(--tiktok-pink), var(--tiktok-blue));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .pricing-period {
+            color: var(--tiktok-dark-gray);
+        }
+        
+        .pricing-features {
+            list-style: none;
+            margin-bottom: 30px;
+        }
+        
+        .pricing-features li {
+            padding: 10px 0;
+            border-bottom: 1px solid #f0f0f0;
+        }
+        
+        .pricing-features li:last-child {
+            border-bottom: none;
+        }
+        
+        .pricing-button {
+            display: inline-block;
+            background: linear-gradient(45deg, var(--tiktok-pink), var(--tiktok-blue));
+            color: white;
+            padding: 12px 30px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(254, 44, 85, 0.3);
+        }
+        
+        .pricing-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(254, 44, 85, 0.5);
+        }
+        
+        .budget-notice {
+            background-color: rgba(254, 44, 85, 0.1);
+            border-left: 4px solid var(--tiktok-pink);
+            padding: 15px;
+            margin-top: 20px;
+            border-radius: 0 5px 5px 0;
+            text-align: left;
+        }
+        
+        /* Testimonials Section */
+        .testimonials {
+            padding: 100px 0;
+            background-color: var(--tiktok-white);
+        }
+        
+        .testimonials-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+        }
+        
+        .testimonial-card {
+            background-color: var(--tiktok-gray);
+            border-radius: 10px;
+            padding: 30px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+        }
+        
+        .testimonial-text {
+            font-style: italic;
+            margin-bottom: 20px;
+            position: relative;
+        }
+        
+        .testimonial-text::before {
+            content: '"';
+            font-size: 4rem;
+            color: var(--tiktok-blue);
+            position: absolute;
+            top: -20px;
+            left: -10px;
+            opacity: 0.3;
+        }
+        
+        .testimonial-author {
+            display: flex;
+            align-items: center;
+        }
+        
+        .author-avatar {
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: var(--tiktok-dark-gray);
+            margin-right: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            font-weight: bold;
+        }
+        
+        .author-info h4 {
+            margin-bottom: 5px;
+        }
+        
+        .author-info p {
+            color: var(--tiktok-dark-gray);
+            font-size: 0.9rem;
+        }
+        
+        /* TikTok Interface Section */
+        .tiktok-interface {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--tiktok-black) 0%, #121212 100%);
+            color: white;
+            text-align: center;
+        }
+        
+        .interface-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 50px;
+        }
+        
+        .interface-card {
+            background: rgba(255, 255, 255, 0.05);
+            border-radius: 10px;
+            padding: 20px;
+            width: 300px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: transform 0.3s;
+        }
+        
+        .interface-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .interface-img {
+            width: 100%;
+            height: 180px;
+            background: linear-gradient(45deg, #1a1a1a, #2a2a2a);
+            border-radius: 5px;
+            margin-bottom: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--tiktok-blue);
+            font-size: 3rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .interface-img::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                radial-gradient(circle at 30% 20%, rgba(37, 244, 238, 0.1) 0%, transparent 50%),
+                radial-gradient(circle at 80% 80%, rgba(254, 44, 85, 0.1) 0%, transparent 50%);
+        }
+        
+        /* Contact Section */
+        .contact {
+            padding: 100px 0;
+            background: linear-gradient(135deg, var(--tiktok-purple) 0%, var(--tiktok-blue) 100%);
+            color: var(--tiktok-white);
+            text-align: center;
+        }
+        
+        .contact-content {
+            max-width: 600px;
+            margin: 0 auto;
+        }
+        
+        .contact p {
+            margin-bottom: 30px;
+            font-size: 1.1rem;
+            color: rgba(255, 255, 255, 0.9);
+        }
+        
+        .social-links {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+        
+        .social-link {
+            display: inline-block;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background-color: rgba(255, 255, 255, 0.1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-decoration: none;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        
+        .social-link:hover {
+            background-color: var(--tiktok-pink);
+            transform: translateY(-5px);
+        }
+        
+        /* Footer */
+        footer {
+            background-color: var(--tiktok-black);
+            color: var(--tiktok-white);
+            padding: 30px 0;
+            text-align: center;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        
+        .footer-logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            margin-bottom: 20px;
+            background: linear-gradient(45deg, var(--tiktok-pink), var(--tiktok-blue));
+            -webkit-background-clip: text;
+            background-clip: text;
+            color: transparent;
+        }
+        
+        .footer-links {
+            display: flex;
+            gap: 20px;
+            margin-bottom: 20px;
+        }
+        
+        .footer-links a {
+            color: var(--tiktok-white);
+            text-decoration: none;
+            transition: color 0.3s;
+        }
+        
+        .footer-links a:hover {
+            color: var(--tiktok-blue);
+        }
+        
+        .copyright {
+            color: var(--tiktok-dark-gray);
+            font-size: 0.9rem;
+        }
+        
+        /* Animations */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.05);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .pulse {
+            animation: pulse 2s infinite;
+        }
+        
+        /* Floating Elements */
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+        
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-content {
+                flex-direction: column;
+            }
+            
+            nav ul {
+                margin-top: 20px;
+            }
+            
+            nav ul li {
+                margin-left: 15px;
+                margin-right: 15px;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
+            }
+            
+            .pricing-card.popular {
+                transform: scale(1);
+            }
+            
+            .pricing-card.popular:hover {
+                transform: translateY(-10px);
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">TikTok Pro</div>
+                <nav>
+                    <ul>
+                        <li><a href="#excitement">Avantages</a></li>
+                        <li><a href="#services">Services</a></li>
+                        <li><a href="#pricing">Tarifs</a></li>
+                        <li><a href="#testimonials">Témoignages</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Tu veux vendre sur TikTok ?</h1>
+                <p>Je t'aide à créer un compte TikTok Business et à booster tes biens et services sur TikTok. Démarre ta présence professionnelle sur la plateforme la plus tendance du moment.</p>
+                <a href="https://wa.me/242067458011?text=Bonjour,%20je%20suis%20intéressé%20par%20vos%20services%20TikTok%20Business" class="cta-button pulse" target="_blank">Profiter de l'offre</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Excitement Section -->
+    <section class="excitement" id="excitement">
+        <div class="container">
+            <div class="excitement-content">
+                <h2>Pourquoi TikTok est la plateforme incontournable en 2023 ?</h2>
+                <p>Rejoignez la révolution TikTok et transformez votre business avec une audience engagée et des résultats concrets</p>
+                
+                <div class="excitement-grid">
+                    <div class="excitement-card floating" style="animation-delay: 0s;">
+                        <i class="excitement-icon fas fa-chart-line"></i>
+                        <h3>ROI Exceptionnel</h3>
+                        <p>Obtenez un retour sur investissement jusqu'à 3x supérieur aux autres plateformes grâce à un public hyper-engagé.</p>
+                    </div>
+                    <div class="excitement-card floating" style="animation-delay: 0.2s;">
+                        <i class="excitement-icon fas fa-users"></i>
+                        <h3>Audience Massive</h3>
+                        <p>Touche plus d'1 milliard d'utilisateurs actifs, principalement des 16-34 ans, la cible la plus dépensière.</p>
+                    </div>
+                    <div class="excitement-card floating" style="animation-delay: 0.4s;">
+                        <i class="excitement-icon fas fa-bolt"></i>
+                        <h3>Viralité Garantie</h3>
+                        <p>Vos contenus peuvent devenir viraux en quelques heures, générant un trafic massif vers votre business.</p>
+                    </div>
+                    <div class="excitement-card floating" style="animation-delay: 0.6s;">
+                        <i class="excitement-icon fas fa-rocket"></i>
+                        <h3>Croissance Explosive</h3>
+                        <p>Multipliez votre visibilité et vos ventes grâce à des algorithmes qui favorisent la découverte organique.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="services" id="services">
+        <div class="container">
+            <h2 class="section-title">Ce que tu gagnes en travaillant avec moi</h2>
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">🎯</div>
+                    <h3>Visuel publicitaire optimisé</h3>
+                    <p>Un contenu visuel conçu spécialement pour TikTok, capable de capter l'attention en moins de 3 secondes et de convertir les viewers en clients.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">🚀</div>
+                    <h3>Campagne TikTok Ads stratégique</h3>
+                    <p>Lancement de ta première campagne publicitaire ciblée pour maximiser ton retour sur investissement et atteindre ton audience idéale.</p>
+                </div>
+                <div class="service-card">
+                    <div class="service-icon">💬</div>
+                    <h3>Intégration WhatsApp</h3>
+                    <p>Un lien WhatsApp pré-rempli pour convertir tes prospects en clients sans friction et faciliter la communication directe.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pricing Section -->
+    <section class="pricing" id="pricing">
+        <div class="container">
+            <h2 class="section-title">Nos forfaits</h2>
+            
+            <div class="pricing-grid">
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Création de Compte</h3>
+                        <div class="pricing-price">30$</div>
+                        <div class="pricing-period">20 000 FCFA</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Création de compte TikTok Business</li>
+                        <li>Configuration du profil professionnel</li>
+                        <li>Optimisation de la bio et du lien</li>
+                        <li>Guide d'utilisation de base</li>
+                    </ul>
+                    <a href="https://wa.me/242067458011?text=Bonjour,%20je%20suis%20intéressé%20par%20la%20création%20de%20compte%20TikTok%20Business%20(30$)" class="pricing-button" target="_blank">Choisir ce forfait</a>
+                </div>
+                
+                <div class="pricing-card popular">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Campagne Basique</h3>
+                        <div class="pricing-price">20$</div>
+                        <div class="pricing-period">15 000 FCFA</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Configuration d'une campagne simple</li>
+                        <li>1 visuel publicitaire optimisé</li>
+                        <li>Ciblage basique</li>
+                        <li>Support par email</li>
+                    </ul>
+                    <div class="budget-notice">
+                        <p><strong>Note :</strong> Le budget publicitaire pour TikTok Ads n'est pas inclus dans ce forfait.</p>
+                    </div>
+                    <a href="https://wa.me/242067458011?text=Bonjour,%20je%20suis%20intéressé%20par%20le%20forfait%20Campagne%20Basique%20(20$)" class="pricing-button" target="_blank">Choisir ce forfait</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Campagne Standard</h3>
+                        <div class="pricing-price">35$</div>
+                        <div class="pricing-period">22 000 FCFA</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Configuration de campagne avancée</li>
+                        <li>2 visuels publicitaires optimisés</li>
+                        <li>Ciblage avancé et retargeting</li>
+                        <li>Support WhatsApp prioritaire</li>
+                        <li>Rapport de performance basique</li>
+                    </ul>
+                    <div class="budget-notice">
+                        <p><strong>Note :</strong> Le budget publicitaire pour TikTok Ads n'est pas inclus dans ce forfait.</p>
+                    </div>
+                    <a href="https://wa.me/242067458011?text=Bonjour,%20je%20suis%20intéressé%20par%20le%20forfait%20Campagne%20Standard%20(35$)" class="pricing-button" target="_blank">Choisir ce forfait</a>
+                </div>
+                
+                <div class="pricing-card">
+                    <div class="pricing-header">
+                        <h3 class="pricing-title">Campagne Premium</h3>
+                        <div class="pricing-price">55$</div>
+                        <div class="pricing-period">35 000 FCFA</div>
+                    </div>
+                    <ul class="pricing-features">
+                        <li>Configuration de campagne premium</li>
+                        <li>5 visuels publicitaires optimisés</li>
+                        <li>Ciblage expert et A/B testing</li>
+                        <li>Analyse détaillée des performances</li>
+                        <li>Support 24/7 et optimisation continue</li>
+                        <li>Rapport complet avec recommandations</li>
+                    </ul>
+                    <div class="budget-notice">
+                        <p><strong>Note :</strong> Le budget publicitaire pour TikTok Ads n'est pas inclus dans ce forfait.</p>
+                    </div>
+                    <a href="https://wa.me/242067458011?text=Bonjour,%20je%20suis%20intéressé%20par%20le%20forfait%20Campagne%20Premium%20(55$)" class="pricing-button" target="_blank">Choisir ce forfait</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- TikTok Interface Section -->
+    <section class="tiktok-interface">
+        <div class="container">
+            <h2 class="section-title">Interface Professionnelle TikTok Business</h2>
+            <p>Découvrez l'interface puissante de TikTok Ads Manager que nous utiliserons pour booster votre business</p>
+            
+            <div class="interface-container">
+                <div class="interface-card">
+                    <div class="interface-img">
+                        <i class="fas fa-sliders-h"></i>
+                    </div>
+                    <h3>Tableau de Bord Complet</h3>
+                    <p>Gérez toutes vos campagnes publicitaires depuis une interface centralisée et intuitive.</p>
+                </div>
+                
+                <div class="interface-card">
+                    <div class="interface-img">
+                        <i class="fas fa-bullseye"></i>
+                    </div>
+                    <h3>Ciblage Avancé</h3>
+                    <p>Atteignez votre audience idéale avec des options de ciblage précises et performantes.</p>
+                </div>
+                
+                <div class="interface-card">
+                    <div class="interface-img">
+                        <i class="fas fa-chart-bar"></i>
+                    </div>
+                    <h3>Analytiques Détaillées</h3>
+                    <p>Suivez vos performances en temps réel et optimisez vos campagnes pour de meilleurs résultats.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">Ils nous font confiance</h2>
+            <div class="testimonials-grid">
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        Grâce à ce service, j'ai pu lancer ma boutique en ligne sur TikTok et générer mes premières ventes en moins d'une semaine. L'accompagnement était parfait !
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">MS</div>
+                        <div class="author-info">
+                            <h4>Marie S.</h4>
+                            <p>Boutique de mode</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        Je ne pensais pas que TikTok pourrait fonctionner pour mon service de coaching. Les résultats ont dépassé mes attentes avec un ROI de 3x en un mois.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">PD</div>
+                        <div class="author-info">
+                            <h4>Pierre D.</h4>
+                            <p>Coach professionnel</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-card">
+                    <div class="testimonial-text">
+                        La création du compte et le lancement de la campagne ont été rapides et efficaces. J'ai déjà acquis 5 nouveaux clients grâce à TikTok.
+                    </div>
+                    <div class="testimonial-author">
+                        <div class="author-avatar">AJ</div>
+                        <div class="author-info">
+                            <h4>Ahmed J.</h4>
+                            <p>Restaurateur</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="contact-content">
+                <h2 class="section-title">Prêt à booster tes ventes sur TikTok ?</h2>
+                <p>Ne laissez pas passer l'opportunité de croissance la plus excitante de 2023. Contactez-moi dès maintenant pour une consultation gratuite et découvrez comment TikTok peut transformer votre business.</p>
+                
+                <div class="social-links">
+                    <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-facebook-f"></i></a>
+                    <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                </div>
+                
+                <a href="https://wa.me/242067458011?text=Bonjour,%20je%20suis%20intéressé%20par%20vos%20services%20TikTok%20Business%20et%20je%20souhaite%20en%20savoir%20plus" class="cta-button pulse" target="_blank">Démarrer sur WhatsApp</a>
+                
+                <p style="margin-top: 30px;">Ou contactez-moi par email: <a href="mailto:aromanemetshu@gmail.com" style="color: white; text-decoration: underline;">aromanemetshu@gmail.com</a></p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">TikTok Pro</div>
+                <div class="footer-links">
+                    <a href="#excitement">Avantages</a>
+                    <a href="#services">Services</a>
+                    <a href="#pricing">Tarifs</a>
+                    <a href="#testimonials">Témoignages</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="copyright">© 2023 TikTok Pro Services. Tous droits réservés.</div>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('nav a, .footer-links a').forEach(anchor => {
+            anchor.addEventListener('click', function(e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId.startsWith('#')) {
+                    const targetElement = document.querySelector(targetId);
+                    if(targetElement) {
+                        window.scrollTo({
+                            top: targetElement.offsetTop - 80,
+                            behavior: 'smooth'
+                        });
+                    }
+                }
+            });
+        });
+        
+        // Add animation on scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if(entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe elements for animation
+        document.querySelectorAll('.service-card, .pricing-card, .testimonial-card, .excitement-card, .interface-card').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(20px)';
+            el.style.transition = 'opacity 0.5s, transform 0.5s';
+            observer.observe(el);
+        });
+        
+        // Add floating animation to elements with delay
+        document.querySelectorAll('.floating').forEach((el, index) => {
+            el.style.animationDelay = `${index * 0.2}s`;
+        });
+        
+        // Add pulse animation to CTA buttons
+        document.querySelectorAll('.cta-button').forEach(button => {
+            setInterval(() => {
+                button.classList.toggle('pulse');
+            }, 4000);
+        });
+    </script>
+</body>
+</html>
